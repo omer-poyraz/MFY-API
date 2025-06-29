@@ -1,0 +1,38 @@
+# Node.js
+node_modules/
+.env
+.DS_Store
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# VSCode
+.vscode/
+
+# Uploads
+uploads/
+
+# Logs
+logs/
+*.log
+
+# Database
+*.sqlite
+*.sqlite3
+
+# Sequelize
+config/config.json
+
+# OS
+Thumbs.db
+
+# Build
+/dist
+/build
+
+# Coverage
+coverage/
+
+# Misc
+.idea/
+*.swp
