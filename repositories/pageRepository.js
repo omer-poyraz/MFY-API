@@ -3,7 +3,6 @@ const Showcase = require('../models/showcase');
 
 class PageRepository {
   async create(data) {
-    // Slug benzersizliği ve otomatik arttırma
     let baseSlug = data.slug;
     let langKeys = Object.keys(baseSlug);
     let newSlug = { ...baseSlug };

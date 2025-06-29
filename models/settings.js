@@ -40,7 +40,7 @@ const Settings = sequelize.define('Settings', {
     allowNull: true
   }
 }, {
-  tableName: 'Settings', // Büyük S ile tablo adı
+  tableName: 'Settings',
   timestamps: false
 });
 

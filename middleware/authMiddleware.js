@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken');
-const JWT_SECRET = 'your_jwt_secret_key'; // Bunu .env dosyasına taşıyabilirsiniz
+const JWT_SECRET = 'UZUNkarakterilibirşeylerolsaçokiyiolurişdeamabukadaryazabiliyorumvaktimkısıtlıdahasonratekrardeneyeceğim.';
 
 module.exports = (req, res, next) => {
   const authHeader = req.headers['authorization'];

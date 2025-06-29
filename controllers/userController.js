@@ -18,5 +18,3 @@ exports.create = async (req, res) => {
     });
   }
 };
-
-// ...existing code...

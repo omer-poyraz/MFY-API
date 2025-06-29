@@ -28,7 +28,6 @@ class MenuRepository {
   }
 
   static async updateOrder(orderList) {
-    // orderList: [{ id, order }, ...]
     for (const item of orderList) {
       await Menu.update({ order: item.order }, { where: { id: item.id } });
     }

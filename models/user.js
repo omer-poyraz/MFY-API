@@ -39,7 +39,7 @@ const User = sequelize.define('User', {
     defaultValue: DataTypes.NOW
   }
 }, {
-  tableName: 'Users', // Büyük U ile
+  tableName: 'Users',
   timestamps: false
 });
 

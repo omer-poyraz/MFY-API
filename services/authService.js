@@ -2,7 +2,7 @@ const crypto = require('crypto');
 const jwt = require('jsonwebtoken');
 const UserRepository = require('../repositories/userRepository');
 
-const JWT_SECRET = 'your_jwt_secret_key'; // Bunu .env dosyasına taşıyabilirsiniz
+const JWT_SECRET = 'UZUNkarakterilibirşeylerolsaçokiyiolurişdeamabukadaryazabiliyorumvaktimkısıtlıdahasonratekrardeneyeceğim';
 const TOKEN_EXPIRES_IN = '1d';
 
 class AuthService {

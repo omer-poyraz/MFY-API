@@ -12,7 +12,6 @@ function slugify(str) {
 }
 
 const createBlog = async (data) => {
-  // Slug otomatik üret
   if (!data.slug) {
     data.slug = {};
     for (const lang of Object.keys(data.title)) {

@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const corsConfig = require('./config/cors');
 const authRoutes = require('./routes/authRoutes');
 const menuRoutes = require('./routes/menuRoutes');
 const settingsRoutes = require('./routes/settingsRoutes');
@@ -13,7 +14,6 @@ const sequelize = require('./config/database');
 const SettingsService = require('./services/settingsService');
 const path = require('path');
 
-// Swagger
 const swaggerUi = require('swagger-ui-express');
 const swaggerJsdoc = require('swagger-jsdoc');
 
@@ -46,6 +46,7 @@ const swaggerOptions = {
 const swaggerSpec = swaggerJsdoc(swaggerOptions);
 
 const app = express();
+corsConfig(app);
 app.use(bodyParser.json());
 
 app.use('/api', authRoutes);
@@ -63,7 +64,7 @@ app.use('/uploads/socialmedia', express.static(__dirname + '/uploads/socialmedia
 app.use('/uploads/blog', express.static(path.join(__dirname, 'uploads/blog')));
 app.use('/uploads/company', express.static(path.join(__dirname, 'uploads/company')));
 app.use('/uploads/showcase', express.static(path.join(__dirname, 'uploads/showcase')));
-app.use('/user', express.static(path.join(__dirname, 'uploads/user'))); // Kullanıcı dosyalarını statik sun
+app.use('/user', express.static(path.join(__dirname, 'uploads/user')));
 
 app.use((err, req, res, next) => {
   res.status(500).json({ error: err.message });

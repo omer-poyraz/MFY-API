@@ -4,7 +4,6 @@ const path = require('path');
 
 const uploadDir = path.join(__dirname, '../uploads/user');
 
-// Klasör otomatik oluşturulsun
 if (!fs.existsSync(uploadDir)) {
   fs.mkdirSync(uploadDir, { recursive: true });
 }

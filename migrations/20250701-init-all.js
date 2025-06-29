@@ -2,7 +2,6 @@
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    // 1. Users
     await queryInterface.createTable('Users', {
       id: { allowNull: false, autoIncrement: true, primaryKey: true, type: Sequelize.INTEGER },
       username: { type: Sequelize.STRING, allowNull: false },
@@ -13,7 +12,6 @@ module.exports = {
       createdAt: { allowNull: false, type: Sequelize.DATE, defaultValue: Sequelize.NOW },
       updatedAt: { allowNull: false, type: Sequelize.DATE, defaultValue: Sequelize.NOW }
     });
-    // 2. Blogs
     await queryInterface.createTable('Blogs', {
       id: { allowNull: false, autoIncrement: true, primaryKey: true, type: Sequelize.INTEGER },
       title: { type: Sequelize.JSON, allowNull: false },
@@ -26,7 +24,6 @@ module.exports = {
       createdAt: { allowNull: false, type: Sequelize.DATE, defaultValue: Sequelize.NOW },
       updatedAt: { allowNull: false, type: Sequelize.DATE, defaultValue: Sequelize.NOW }
     });
-    // 3. Companies
     await queryInterface.createTable('Companies', {
       id: { allowNull: false, autoIncrement: true, primaryKey: true, type: Sequelize.INTEGER },
       title: { type: Sequelize.JSON, allowNull: false },
@@ -36,7 +33,6 @@ module.exports = {
       createdAt: { allowNull: false, type: Sequelize.DATE, defaultValue: Sequelize.NOW },
       updatedAt: { allowNull: false, type: Sequelize.DATE, defaultValue: Sequelize.NOW }
     });
-    // 4. Settings
     await queryInterface.createTable('Settings', {
       id: { allowNull: false, autoIncrement: true, primaryKey: true, type: Sequelize.INTEGER },
       title: { type: Sequelize.JSON, allowNull: false },
@@ -50,7 +46,6 @@ module.exports = {
       createdAt: { allowNull: false, type: Sequelize.DATE, defaultValue: Sequelize.NOW },
       updatedAt: { allowNull: false, type: Sequelize.DATE, defaultValue: Sequelize.NOW }
     });
-    // 5. Pages
     await queryInterface.createTable('Pages', {
       id: { allowNull: false, autoIncrement: true, primaryKey: true, type: Sequelize.INTEGER },
       title: { type: Sequelize.JSON, allowNull: false },
@@ -66,7 +61,6 @@ module.exports = {
       createdAt: { allowNull: false, type: Sequelize.DATE, defaultValue: Sequelize.NOW },
       updatedAt: { allowNull: false, type: Sequelize.DATE, defaultValue: Sequelize.NOW }
     });
-    // 6. Showcases
     await queryInterface.createTable('Showcases', {
       id: { allowNull: false, autoIncrement: true, primaryKey: true, type: Sequelize.INTEGER },
       title: { type: Sequelize.JSON, allowNull: false },
@@ -79,7 +73,6 @@ module.exports = {
       createdAt: { allowNull: false, type: Sequelize.DATE, defaultValue: Sequelize.NOW },
       updatedAt: { allowNull: false, type: Sequelize.DATE, defaultValue: Sequelize.NOW }
     });
-    // 7. Forms
     await queryInterface.createTable('Forms', {
       id: { allowNull: false, autoIncrement: true, primaryKey: true, type: Sequelize.INTEGER },
       name: { type: Sequelize.STRING, allowNull: false },

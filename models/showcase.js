@@ -11,7 +11,6 @@ const Showcase = sequelize.define('Showcase', {
   companyId: { type: DataTypes.INTEGER, allowNull: false }
 });
 
-// İlişki tanımı index.js'de yapılacak
 Showcase.belongsTo(Page, { foreignKey: 'pageId', as: 'page' });
 Page.hasMany(Showcase, { foreignKey: 'pageId', as: 'showcases' });
 
