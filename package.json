@@ -4,7 +4,17 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "node index.js",
+    "db:drop": "npx sequelize-cli db:drop",
+    "db:create": "npx sequelize-cli db:create",
+    "db:migrate": "npx sequelize-cli db:migrate",
+    "db:migrate:undo": "npx sequelize-cli db:migrate:undo",
+    "db:migrate:undo:all": "npx sequelize-cli db:migrate:undo:all",
+    "db:seed": "npx sequelize-cli db:seed:all",
+    "db:seed:undo": "npx sequelize-cli db:seed:undo:all",
+    "migration:generate": "npx sequelize-cli migration:generate --name",
+    "seeder:generate": "npx sequelize-cli seed:generate --name",
+    "db:reset": "npm run db:drop && npm run db:create && npm run db:migrate && npm run db:seed"
   },
   "keywords": [],
   "author": "",
@@ -13,6 +23,7 @@
   "description": "",
   "dependencies": {
     "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
     "express": "^5.1.0",
     "jsonwebtoken": "^9.0.2",
     "multer": "^2.0.1",

@@ -167,11 +167,11 @@ const blogController = require('../controllers/blogController');
 const blogUpload = require('../middleware/blogUpload');
 const auth = require('../middleware/authMiddleware');
 
-router.post('/', auth, blogUpload.single('file'), blogController.createBlog);
-router.get('/:id', blogController.getBlog);
-router.get('/', blogController.getAllBlogs);
-router.put('/:id', auth, blogUpload.single('file'), blogController.updateBlog);
-router.delete('/:id', auth, blogController.deleteBlog);
-router.post('/order', auth, blogController.updateBlogOrder);
+router.post('/Blog', auth, blogUpload.single('file'), blogController.createBlog);
+router.get('/Blog', blogController.getAllBlogs);
+router.get('/Blog/:id', blogController.getBlog);
+router.put('/Blog/:id', auth, blogUpload.single('file'), blogController.updateBlog);
+router.delete('/Blog/:id', auth, blogController.deleteBlog);
+router.post('/Blog/order', auth, blogController.updateBlogOrder);
 
 module.exports = router;

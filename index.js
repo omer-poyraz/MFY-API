@@ -53,7 +53,7 @@ app.use('/api', authRoutes);
 app.use('/api', menuRoutes);
 app.use('/api', settingsRoutes);
 app.use('/api', socialMediaRoutes);
-app.use('/api/blogs', blogRoutes);
+app.use('/api', blogRoutes);
 app.use('/api/company', companyRoutes);
 app.use('/api/showcases', showcaseRoutes);
 app.use('/api', formRoutes);
